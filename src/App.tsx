@@ -1,9 +1,12 @@
-import "./App.css";
+import Container from "./components/atoms/Container";
+import FirstSection from "./components/templates/FirstSection";
 
 function App() {
   return (
     <>
-      <h1 className="text-red">Vite + React</h1>
+      <Container>
+        <FirstSection />
+      </Container>
     </>
   );
 }

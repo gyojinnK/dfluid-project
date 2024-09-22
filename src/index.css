@@ -2,17 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+html {
+  font-size: 0.9524vw;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@media (min-width: 1680px) {
+  html {
+    font-size: 16px;
+  }
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
+@font-face {
+  font-family: "Exo-2";
+  font-display: swap;
+  src: url("/fonts/Exo2-VariableFont_wght.ttf") format("ttf");
+}
+@font-face {
+  font-family: "montserrat";
+  font-display: swap;
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf");
+}

@@ -4,5 +4,9 @@ export default {
   theme: {
     extend: {},
   },
+  fontFamily: {
+    Exo2: ["Exo-2"],
+    montserrat: ["montserrat", "sans-serif"],
+  },
   plugins: [],
 };
