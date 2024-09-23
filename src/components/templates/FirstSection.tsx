@@ -13,7 +13,7 @@ const FirstSection = () => {
   }, []);
 
   return (
-    <>
+    <div className="pb-[6.875rem]">
       <div>
         <Heading className="pt-[7.5rem] pb-[4.375rem]">
           Snap photos and share like{"\n"}never before
@@ -24,7 +24,7 @@ const FirstSection = () => {
           <Profile key={info.id} data={info} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

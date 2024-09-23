@@ -1,7 +1,6 @@
 import { TProfileInfos } from "../../constants/profile-infos";
-import Description from "../atoms/Description";
-import Title from "../atoms/Title";
-import Avatar from "../molecules/Avatar";
+import Avatar from "../atoms/Avatar";
+import TextBox from "../molecules/TextBox";
 
 type ProfileProps = {
   data: TProfileInfos;
@@ -11,10 +10,14 @@ const Profile: React.FC<ProfileProps> = ({ data }) => {
   return (
     <div>
       <Avatar className="mb-[2.5rem]">
-        <img src={data.imageUrl} alt={data.id} />
+        <img src={data.imageUrl} alt={`${data.id}-avatar`} />
       </Avatar>
-      <Title className="pb-[1.5rem]">{data.title}</Title>
-      <Description className="pb-[1.5rem]">{data.description}</Description>
+      <TextBox>
+        <TextBox.Title>{data.title}</TextBox.Title>
+        <TextBox.Description className="text-[rgba(0,0,0,0.8)]">
+          {data.description}
+        </TextBox.Description>
+      </TextBox>
       <a
         href={data.extraLink}
         className="font-['Exo2'] text-[#18A0FB] text-[1.125rem] font-bold"

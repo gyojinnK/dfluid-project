@@ -5,7 +5,7 @@ export default {
     extend: {},
   },
   fontFamily: {
-    Exo2: ["Exo-2"],
+    Exo2: ["Exo2"],
     montserrat: ["montserrat", "sans-serif"],
   },
   plugins: [],

@@ -6,7 +6,7 @@ type DescriptionProps = {
 const Description: React.FC<DescriptionProps> = ({ children, className }) => {
   return (
     <p
-      className={`${className} font-['montserrat'] text-[1.125rem] text-[rgba(0,0,0,0.8)] `}
+      className={`${className} font-['montserrat'] text-[1.125rem] leading-[1.875rem]`}
     >
       {children}
     </p>

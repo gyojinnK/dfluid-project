@@ -1,5 +1,6 @@
 import Container from "./components/atoms/Container";
 import FirstSection from "./components/templates/FirstSection";
+import SecondSection from "./components/templates/SecondSection";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Container>
         <FirstSection />
       </Container>
+      <SecondSection />
     </>
   );
 }
