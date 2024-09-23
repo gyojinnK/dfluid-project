@@ -1,5 +1,6 @@
-import { render } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import SecondSection from "../components/templates/SecondSection";
+import "@testing-library/jest-dom";
 
 test("이미지 API 동작 테스트", async () => {
   const response = await fetch(
@@ -27,4 +28,19 @@ test("이미지 API 동작 테스트", async () => {
 
 test("valid/invalid 케이스의 유효성 검증과 스타일 변경 테스트", async () => {
   render(<SecondSection />);
+  const input = screen.getByPlaceholderText("Enter your email");
+  const borderDiv = input.closest("div");
+
+  fireEvent.change(input, { target: { value: "test@example.com" } });
+  expect(borderDiv).toHaveClass("border-[#00C300]");
+
+  fireEvent.change(input, { target: { value: "invalid-email" } });
+  expect(borderDiv).toHaveClass("border-[#ff6633]");
+  await waitFor(() => {
+    const errorMessage = screen.getByText("Please enter a valid email!");
+    expect(errorMessage).toBeInTheDocument();
+  });
+
+  fireEvent.change(input, { target: { value: "" } });
+  expect(borderDiv).toHaveClass("border-[#ffffff]");
 });
