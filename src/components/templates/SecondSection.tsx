@@ -11,26 +11,15 @@ const SecondSection = () => {
   const [bgImage, setBgImage] = useState<string | null>(null);
   const [email, setEmail] = useState<string>("");
   const [isValidEmail, setIsValidEmail] = useState<boolean | null>(null);
-  const [debounceTimeout, setDebounceTimeout] = useState<NodeJS.Timeout | null>(
-    null
-  );
 
   const validateEmailHandler = (value: string) => {
     setEmail(value);
-    if (debounceTimeout) {
-      clearTimeout(debounceTimeout);
+    if (value === "") {
+      setIsValidEmail(null);
+    } else {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      setIsValidEmail(emailRegex.test(value));
     }
-
-    const newTimeout = setTimeout(() => {
-      if (value === "") {
-        setIsValidEmail(null);
-      } else {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        setIsValidEmail(emailRegex.test(value));
-      }
-    }, 300);
-
-    setDebounceTimeout(newTimeout);
   };
 
   useEffect(() => {
