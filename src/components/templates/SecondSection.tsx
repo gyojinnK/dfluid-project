@@ -5,30 +5,43 @@ import TextContent from "../organisms/TextContent";
 import paperPlaneTrue from "/icons/paper-plane-true.svg";
 import paperPlaneFalse from "/icons/paper-plane-false.svg";
 import { Letter } from "../../constants/second-section-letters";
-import { fetchBgImage } from "../../actions/fetch-bg-image";
+import { fetchBgImage } from "../../services/fetch-bg-image";
 
 const SecondSection = () => {
   const [bgImage, setBgImage] = useState<string | null>(null);
   const [email, setEmail] = useState<string>("");
   const [isValidEmail, setIsValidEmail] = useState<boolean | null>(null);
+  const [debounceTimeout, setDebounceTimeout] = useState<NodeJS.Timeout | null>(
+    null
+  );
 
   const validateEmailHandler = (value: string) => {
     setEmail(value);
-
-    if (value === "") {
-      setIsValidEmail(null);
-    } else {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      setIsValidEmail(emailRegex.test(value));
+    if (debounceTimeout) {
+      clearTimeout(debounceTimeout);
     }
+
+    const newTimeout = setTimeout(() => {
+      if (value === "") {
+        setIsValidEmail(null);
+      } else {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        setIsValidEmail(emailRegex.test(value));
+      }
+    }, 300);
+
+    setDebounceTimeout(newTimeout);
   };
 
   useEffect(() => {
-    const savedBgImage = localStorage.getItem("bgImage");
+    let savedBgImage = localStorage.getItem("bgImage");
     if (savedBgImage) {
       setBgImage(savedBgImage);
     } else {
-      fetchBgImage();
+      fetchBgImage().then((imageUrl: string) => {
+        setBgImage(imageUrl);
+        localStorage.setItem("bgImage", imageUrl);
+      });
     }
   }, []);
 

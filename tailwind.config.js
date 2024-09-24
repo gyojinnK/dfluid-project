@@ -8,5 +8,5 @@ export default {
     Exo2: ["Exo2"],
     montserrat: ["montserrat", "sans-serif"],
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };

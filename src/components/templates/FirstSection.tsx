@@ -2,23 +2,22 @@ import { useEffect, useState } from "react";
 import { ProfileInfos, TProfileInfos } from "../../constants/profile-infos";
 import Heading from "../atoms/Heading";
 import Profile from "../organisms/Profile";
+import { shuffleProfile } from "../../utils/shuffle-profile";
 
 const FirstSection = () => {
   const [randomOrderInfos, setRandomOrderInfos] =
     useState<TProfileInfos[]>(ProfileInfos);
+
   useEffect(() => {
-    let copyArray = [...randomOrderInfos];
-    copyArray.sort(() => Math.random() - 0.5);
-    setRandomOrderInfos(copyArray);
+    const shuffledProfiles = shuffleProfile([...ProfileInfos]);
+    setRandomOrderInfos(shuffledProfiles);
   }, []);
 
   return (
     <div className="pb-[6.875rem]">
-      <div>
-        <Heading className="pt-[7.5rem] pb-[4.375rem]">
-          Snap photos and share like{"\n"}never before
-        </Heading>
-      </div>
+      <Heading className="pt-[7.5rem] pb-[4.375rem]">
+        Snap photos and share like{"\n"}never before
+      </Heading>
       <div className="flex justify-start items-center gap-5">
         {randomOrderInfos.map((info) => (
           <Profile key={info.id} data={info} />

@@ -1,4 +1,5 @@
 import { TLetter } from "../../constants/second-section-letters";
+import ExtraSmallText from "../atoms/ExtraSmallText";
 import HorizontalRule from "../atoms/HorizontalRule";
 import TextBox from "../molecules/TextBox";
 
@@ -22,9 +23,9 @@ const TextContent: React.FC<TextContentProps> = ({
         </TextBox.Description>
       </TextBox>
       <HorizontalRule className="text-[#ffffff80] pb-[2rem]" />
-      <p className="font-['montserrat'] text-[0.875rem] text-[#ffffff99] text-center leading-[1.375rem]">
+      <ExtraSmallText className="text-[#ffffff99] text-center">
         {letter.ps}
-      </p>
+      </ExtraSmallText>
     </>
   );
 };
