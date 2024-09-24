@@ -29,9 +29,11 @@ const YearFilter: React.FC<YearFilterProps> = ({}) => {
           <Badge
             key={year}
             isActive={minYear + 990 <= year && year <= maxYear + 1000}
-            className="w-[2.5rem] h-[2.5rem] rounded-full text-[0.875rem] text-[#ffffff] flex justify-center items-center"
+            className="w-[2.5rem] h-[2.5rem] rounded-full text-[#ffffff] flex justify-center items-center"
           >
-            <p className="absolute z-30 select-none">{year}</p>
+            <p className="absolute z-30 select-none font-['Exo2'] text-[0.875rem]">
+              {year}
+            </p>
           </Badge>
         ))}
       </div>
