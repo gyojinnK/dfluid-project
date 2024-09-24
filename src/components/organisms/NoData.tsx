@@ -10,7 +10,7 @@ const NoData = () => {
         <TextBox.Title>
           There is no photo you want. <br /> Try adjusting the filters.
         </TextBox.Title>
-        <HorizontalRule className="pt-[1.5rem]" />
+        <HorizontalRule className="mb-[1.5rem] border-[#00000030]" />
         <SubTitle className="text-[#18a0fb]">
           <a href="http://example.com">Contribute directly</a>
         </SubTitle>

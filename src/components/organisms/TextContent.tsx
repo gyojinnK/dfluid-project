@@ -22,7 +22,7 @@ const TextContent: React.FC<TextContentProps> = ({
           {letter.description}
         </TextBox.Description>
       </TextBox>
-      <HorizontalRule className="text-[#ffffff80] pb-[2rem]" />
+      <HorizontalRule className="mb-[2rem]" />
       <ExtraSmallText className="text-[#ffffff99] text-center">
         {letter.ps}
       </ExtraSmallText>
