@@ -27,7 +27,7 @@
 ```sh
 git clone https://github.com/gyojinnK/dfluid-project.git [폴더명]
 ```
-### IDE로 clone 파일 열기
+### IDE로 clone 폴더 열기
 ### package 설치하기
 ```sh
 npm install
