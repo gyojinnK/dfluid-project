@@ -1,4 +1,4 @@
-# Dfluid 채용 - 과제
+# Dfluid - 과제
 
 ## 목차
 - [기술 스택](#기술-스택)
@@ -51,6 +51,9 @@ npm run dev
 
 ## 테스트 코드
 `@testing-library`와 `vitest`를 사용한 간단한 red-green 테스트를 진행했습니다.
+```sh
+npm run test
+```
 https://github.com/gyojinnK/dfluid-project/blob/c4dd4ef7de01f380606b90ea51a5acb8777d65fe/src/tests/FirstSection.test.tsx#L11-L17
 https://github.com/gyojinnK/dfluid-project/blob/c4dd4ef7de01f380606b90ea51a5acb8777d65fe/src/tests/SecondSection.test.tsx#L5-L50
 https://github.com/gyojinnK/dfluid-project/blob/c4dd4ef7de01f380606b90ea51a5acb8777d65fe/src/tests/ThirdSection.test.tsx#L7-L45
