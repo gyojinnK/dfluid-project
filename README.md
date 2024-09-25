@@ -14,7 +14,6 @@
 <br/>
 
 ## 시작하기
-`Download ZIP`을 통해 프로젝트를 로컬에 설치하고 압축을 해제하여 확인할 수 있습니다.
 ### CLI 사용하기
 ```sh
 git clone https://github.com/gyojinnK/dfluid-project.git
@@ -28,6 +27,7 @@ npm install
 ```sh
 npm run dev
 ```
+- `Download ZIP`을 통해 프로젝트를 로컬에 설치하고 압축을 해제하여 확인할 수 있습니다.
 
 <br/>
 
