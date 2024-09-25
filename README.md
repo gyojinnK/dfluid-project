@@ -12,7 +12,6 @@
 |테스트 라이브러리|Vitest|5.4.1|
 
 <br/>
-<br/>
 
 ## 시작하기
 `Download ZIP`을 통해 프로젝트를 로컬에 설치하고 압축을 해제하여 확인할 수 있습니다.
@@ -29,7 +28,7 @@ npm install
 ```sh
 npm run dev
 ```
-<br/>
+
 <br/>
 
 ## 폴더명 및 역할
@@ -40,7 +39,6 @@ npm run dev
 - `templates`: 실제 데이터를 제외한 전체적인 레이아웃, 뼈대
 
 <br/>
-<br/>
 
 ## 테스트 코드
 `@testing-library`와 `vitest`를 사용한 간단한 red-green 테스트를 진행했습니다.
@@ -48,7 +46,6 @@ https://github.com/gyojinnK/dfluid-project/blob/c4dd4ef7de01f380606b90ea51a5acb8
 https://github.com/gyojinnK/dfluid-project/blob/c4dd4ef7de01f380606b90ea51a5acb8777d65fe/src/tests/SecondSection.test.tsx#L5-L50
 https://github.com/gyojinnK/dfluid-project/blob/c4dd4ef7de01f380606b90ea51a5acb8777d65fe/src/tests/ThirdSection.test.tsx#L7-L45
 
-<br/>
 <br/>
 
 ## Year filter와 Framer motion
@@ -59,7 +56,6 @@ https://github.com/gyojinnK/dfluid-project/blob/c4dd4ef7de01f380606b90ea51a5acb8
 - `Framer-motion`: 화면을 넘어가는 카트들을 `클릭 앤 드래그`로 편리하게 넘겨볼 수 있습니다.
 ![framer-motion](https://github.com/user-attachments/assets/d8a53123-47fc-43b7-8ebe-63141faf4646)
 
-<br/>
 <br/>
 
 ## 화면 너비에 맞게 조정되는 폰트 크기
@@ -75,6 +71,8 @@ html {
   }
 }
 ```
+
+<br/>
 
 ## 자기 피드백 및 개선 가능한 지점 확인
 - YearFilter UI
