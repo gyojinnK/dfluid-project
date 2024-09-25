@@ -65,7 +65,7 @@ https://github.com/gyojinnK/dfluid-project/blob/c4dd4ef7de01f380606b90ea51a5acb8
 ## 화면 너비에 맞게 조정되는 폰트 크기
 ### html 태그에 `font-size`를 `vw`로 설정하여 자동 조정되도록 구현했습니다.
 ```css
-// index.css
+/* index.css */
 html {
   font-size: 0.9524vw;
 }
