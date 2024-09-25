@@ -25,7 +25,7 @@
 ## 시작하기
 ### CLI 사용하기
 ```sh
-git clone https://github.com/gyojinnK/dfluid-project.git
+git clone https://github.com/gyojinnK/dfluid-project.git [폴더명]
 ```
 ### IDE로 clone 파일 열기
 ### package 설치하기
