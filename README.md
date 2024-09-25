@@ -35,7 +35,7 @@ npm run dev
 ## 폴더명 및 역할
 ### `Atomic design pattern`을 기반으로 개발했습니다.
 - `atoms`: 가장 작은 단위(HTML 태그에 대응하는 요소)를 관리.
-- `molecules`: atoms를 결합한 하나의 의미를 갖는 UI UI. ex) BannerCard, UserAvatar
+- `molecules`: atoms를 결합한 하나의 의미를 갖는 UI. ex) BannerCard, UserAvatar
 - `organisms`: atoms, molecules의 집합. ex) Header, Section, Article, Footer
 - `templates`: 실제 데이터를 제외한 전체적인 레이아웃, 뼈대
 
@@ -65,10 +65,10 @@ https://github.com/gyojinnK/dfluid-project/blob/c4dd4ef7de01f380606b90ea51a5acb8
 ## 화면 너비에 맞게 조정되는 폰트 크기
 ### html 태그에 `font-size`를 `vw`로 설정하여 자동 조정되도록 구현했습니다.
 ```css
+// index.css
 html {
   font-size: 0.9524vw;
 }
-
 @media (min-width: 1680px) {
   html {
     font-size: 16px;
@@ -76,4 +76,11 @@ html {
 }
 ```
 
+## 자기 피드백 및 개선 가능한 지점 확인
+- YearFilter UI
+  - as-is: YearFilter UI의 범용성이 다소 부족
+  - to-be: 숫자 뱃지의 개수를 커스텀 할 수 있도록 구현
+- email 유효성 검사
+  - as-is: `React-hook-form`을 적용해보지 못한 부분
+  - to-be: 실제 기능이 추가되었을 때 `React-hook-form`을 이용한 form actoin 구현
 
